@@ -87,10 +87,13 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
             print("Not valid input data")
         >>> "Not valid input data"
     """
-   	try:
-        first_value = int(first_value)
-        second_value = int(second_value)
-        return first_value *second_value
+    try:
+        if type(first_value) == bool or type(second_value) == bool:
+            print("Not valid input data")
+        else:
+            first_value = int(first_value)
+            second_value = int(second_value)
+            return first_value * second_value
     except (ValueError):
         print("Not valid input data")
 
