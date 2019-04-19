@@ -4,6 +4,7 @@ This is a list of functions that should be completed.
 
 from typing import Any
 from typing import List
+import string
 
 
 class OurAwesomeException(Exception):
@@ -94,7 +95,7 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
             first_value = int(first_value)
             second_value = int(second_value)
             return first_value * second_value
-    except (ValueError):
+    except ValueError:
         print("Not valid input data")
 
 
@@ -156,7 +157,6 @@ def alphabet() -> dict:
         alphabet()
         >>> {"a": 1, "b": 2 ...}
     """
-	import string
 	d = {a: b for a,b in zip (range(1, 27),string.ascii_lowercase)}
 	return d
 
